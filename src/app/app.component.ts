@@ -7,10 +7,10 @@ import { WeatherService } from "./weather.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  message:string;
-  constructor(private data:WeatherService){}
+  private message:any;
+  constructor(private ws:WeatherService){}
   ngOnInit(){
-    this.data.currentMessage.subscribe(message => this.message = message)
+    this.ws.currentMessage.subscribe(message => this.message = message)
   }
 
 }

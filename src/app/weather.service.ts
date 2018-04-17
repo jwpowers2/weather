@@ -6,7 +6,7 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 export class WeatherService {
 
   private key: any;
-  private messageSource = new BehaviorSubject<any>({});
+  private messageSource = new BehaviorSubject<any>("");
   currentMessage = this.messageSource.asObservable();
 
   constructor(private http: HttpClient) { 

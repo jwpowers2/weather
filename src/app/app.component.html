@@ -25,8 +25,24 @@
 <router-outlet>
 <app-nav></app-nav>
 </router-outlet> 
-{{message|json}}
 
+<div class="row justify-content-center">
+<div class="jumbotron" *ngIf="!message">Welcome to weather Dojo, select a location to see its weather</div>
+
+<div class="col-sm-4" *ngIf="message">
+	
+<p>The weather in {{message.name}} is:</p>
+<p>General: {{message.weather[0].main}}</p>
+<p>less general: {{message.weather[0].description}}</p>
+<p>with a temp in kelvin of: {{message.main.temp}}</p>
+
+
+</div>
+<div class="col-sm-4" *ngIf="message">
+
+	<img src="{{message.img}}">
+</div>
+</div>
 
 </body>
 </html>
