@@ -1,5 +1,12 @@
 # Weather
 
+## angular app which pulls from open weather api
+
+## pull is generated from the navbar component and the resulting data is 
+
+## displayed in the parent component
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Development server
